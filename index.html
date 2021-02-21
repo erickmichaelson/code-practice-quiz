@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Code Quiz! Welcome!</title>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+  </head>
+  <body>
+
+    <!-- This creates the dark contrasting background for the center form box -->
+    <div class = "min-vh-100 d-flex align-items-center bg-dark">
+
+      <section class="w-100 row justify-content-center">
+
+        <div class="col-10 col-md-6 col-lg-5">
+
+          <h1 class="display-3 text-center text-white">Code Quiz</h1>
+         <!-- This is the container div for the white box form -->
+          <form class="bg-white my-3 p-5 rounded">
+
+            <!-- This is the button to start the quiz -->
+            <div type="button" id="start-quiz" class="btn btn-primary btn-block btn-lg "><button>Start Quiz</button></div>
+            <div id="quiz-content"></div>
+            <h3>SEconds left: <span id="quiz-timer">10</span></h3>
+            <div id="quiz-results"></div>
+            
+          </form>
+        </div>
+
+      </section>
+
+    </div>
+
+   
+    <!-- this is what links the jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
