@@ -1,23 +1,51 @@
 //this variable calls in from the html using jQuery
-let quizButtonEl = $('#start-quiz');
+let quizButtonEl = document.querySelector('#start-quiz');
 let quizDisplayEl = $('#quiz-content');
 let quizResultsEl = $('#quiz-results');
-let quizTimerEl = $('#quiz-timer');
+let quizTimerEl = document.querySelector('quizTimer')
 
 //this initializes the quiz function on the click event
-quizButtonEl.on('click', function() {
-        //this was to check that the function started
-        console.log("you started the quiz!")
 
-        function countDown(){
-            setInterval(function()){
-                if(timeLeft <= 0 ){
-                    clearInterval(timeLeft=0)
+
+  function countDown(){
+      //this console logs to check if the function has started. 
+            console.log("you started the quiz!");
+
+            
+            var timeInterval = setInterval(function() {
+                var timeLeft = 240;
+                if(timeLeft > 1 ){
+                    quizTimerEl.textContent = timeLeft;
+                    console.log(timeLeft);
+                    timeLeft--;
+
+                } else if (timeLeft === 1 ) {
+                    quizTimerEl.textContent = (timeLeft + ' second remaining');
+                    timeLeft--;
+                } else {
+                    quizTimerEl.textContent = 'Times Up!';
+                    clearInterval(timeInterval);
+                    
                 }
-                quizTimerEl.text("#quiz-results") =timeLeft
-                time -=1
-            } ,1000)
-        }
+            }, 1000);
+            
+        };
+
+    
+            
+    function quizFunction(){
+        //check to see if second funciton has initialized.
+        console.log("second");
+
         
-    return
+    };
+
+
+
+
+
+        
+quizButtonEl.addEventListener("click", function(){
+    countDown();
+    quizFunction();
 });
