@@ -2,7 +2,48 @@
 let quizButtonEl = document.querySelector('#start-quiz');
 let quizDisplayEl = $('#quiz-content');
 let quizResultsEl = $('#quiz-results');
-let quizTimerEl = document.querySelector('quizTimer')
+let quizTimerEl = document.querySelector('#quizTimer')
+
+let choice = [];
+
+//this is the array of questions 
+let questions = [{
+    question: "What is the first Querstoin",
+    choices: ["fist answer","secned answer","thid answer","foursh answer"],
+    correct: 3
+},
+{
+    question: "What is the first Querstoin",
+    choices: ["first answer","second answer","third answer","fourth answer"],
+    correct: 1
+},
+{
+    question: "What is the first Querstoin",
+    choices: ["first answer","second answer","third answer","fourth answer"],
+    correct: 3
+},
+{
+    question: "What is the first Querstoin",
+    choices: ["first answer","second answer","third answer","fourth answer"],
+    correct: 0
+},
+{
+    question: "What is the first Querstoin",
+    choices: ["first answer","second answer","third answer","fourth answer"],
+    correct: 2
+},
+{
+    question: "What is the first Querstoin",
+    choices: ["first answer","second answer","third answer","fourth answer"],
+    correct: 2
+}
+];
+
+
+
+function checkAnswer(){
+
+}
 
 //this initializes the quiz function on the click event
 
@@ -13,15 +54,19 @@ let quizTimerEl = document.querySelector('quizTimer')
 
             
             var timeInterval = setInterval(function() {
-                var timeLeft = 240;
-                if(timeLeft > 1 ){
-                    quizTimerEl.textContent = timeLeft;
-                    console.log(timeLeft);
-                    timeLeft--;
 
-                } else if (timeLeft === 1 ) {
-                    quizTimerEl.textContent = (timeLeft + ' second remaining');
-                    timeLeft--;
+                var timeLeft = 240;
+                quizTimerEl.appendChild = timeLeft;
+                if(timeLeft > 1 ){ 
+                    
+                    // quizTimerEl.textContent = timeLeft;
+                    quizTimerEl.appendChild() = timeLeft;
+                    console.log(timeLeft);
+                   timeLeft--;
+
+                // } else if (timeLeft === 1 ) {
+                //     quizTimerEl.textContent = (timeLeft + ' second remaining');
+                //     timeLeft--;
                 } else {
                     quizTimerEl.textContent = 'Times Up!';
                     clearInterval(timeInterval);
@@ -29,6 +74,9 @@ let quizTimerEl = document.querySelector('quizTimer')
                 }
             }, 1000);
             
+
+
+
         };
 
     
@@ -36,6 +84,7 @@ let quizTimerEl = document.querySelector('quizTimer')
     function quizFunction(){
         //check to see if second funciton has initialized.
         console.log("second");
+
 
         
     };
